@@ -1,6 +1,6 @@
 <h1>New Customer</h1>
 <%-#form with  %>  
-<%= form_with scope: :customers, url: customer_path, local: true do |form| %>
+<%= form_with scope: :customers, url: customers_path, local: true do |form| %>
   <p>
     <%= form.label :first_name %><br>
     <%= form.text_field :first_name %>
