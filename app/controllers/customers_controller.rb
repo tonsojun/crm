@@ -1,17 +1,22 @@
 class CustomersController < ApplicationController
+  def show
+    @customers = Customer.find(params[:id])
+  end
+
   def new 
   end
   
   def create
-    @customer = Customer.new(params.require(:customer).permit(:title,:text))
+    @customers = Customer.new(params.permit(:first_name, :last_name, :email, :phone, :street_address, :city_address, :state_address, :zip_code, :birthdate))
 
-    @customer.save
-    redirect_to @customer
+    @customers.save
+    redirect_to @customers
   end
+
 
   private
     def customer_params
-      params_require(:article).permit(:title, :text)
+      params_require(:article).permit(:first_name, :last_name, :email, :phone, :street_address, :city_address, :state_address, :zip_code, :birthdate)
     end 
-    
+
 end

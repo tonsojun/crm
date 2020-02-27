@@ -1,49 +1,49 @@
 <h1>New Customer</h1>
 <%-#form with  %>  
-<%= form_with scope: :customer, url: customers_path, local: true do |form| %>
+<%= form_with scope: :customers, url: customer_path, local: true do |form| %>
   <p>
-    <%= form.label :First_Name %><br>
-    <%= form.text_field :First_Name %>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
   </p>
 
    <p>
-    <%= form.label :Last_Name %><br>
-    <%= form.text_field :Last_Name %>
+    <%= form.label :last_name %><br>
+    <%= form.text_field :last_name %>
   </p>
 
   <p>
-    <%= form.label :Email %><br>
-    <%= form.text_field :Email %>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
   </p>
 
   <p>
-    <%= form.label :Phone %><br>
+    <%= form.label :phone %><br>
     <%= form.text_field :Phone %>
   </p>
 
   <p>
-    <%= form.label :Street_Address %><br>
-    <%= form.text_field :Street_Address %>
+    <%= form.label :street_address %><br>
+    <%= form.text_field :street_address %>
   </p>
 
   <p>
-    <%= form.label :City_Address %><br>
-    <%= form.text_field :City_Address %>
+    <%= form.label :city_address %><br>
+    <%= form.text_field :city_address %>
   </p>
 
   <p>
-    <%= form.label :State_Address %><br>
-    <%= form.text_field :State_Address %>
+    <%= form.label :state_address %><br>
+    <%= form.text_field :state_address %>
   </p>
 
   <p>
-    <%= form.label :Zip_Code %><br>
-    <%= form.text_field :Zip_Code %>
+    <%= form.label :zip_code %><br>
+    <%= form.text_field :zip_code %>
   </p>
 
   <p>
-    <%= form.label :Birthdate %><br>
-    <%= form.text_field :Birthdate %>
+    <%= form.label :birthdate %><br>
+    <%= form.text_field :birthdate %>
   </p>
 
   <p>
