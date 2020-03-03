@@ -18,7 +18,7 @@
 
   <p>
     <%= form.label :phone %><br>
-    <%= form.text_field :Phone %>
+    <%= form.text_field :phone %>
   </p>
 
   <p>
@@ -43,7 +43,7 @@
 
   <p>
     <%= form.label :birthdate %><br>
-    <%= form.text_field :birthdate %>
+    <%= form.text_field :birthdate, value: @customer.some_date.strftime("%m-%d-%Y") %>
   </p>
 
   <p>
