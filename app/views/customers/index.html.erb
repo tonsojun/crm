@@ -2,6 +2,18 @@
 
 <table>
 
+  <tr>
+    <th><%= link_to "First Name", :sort => "first_name" %></th>
+    <th><%= link_to "Last Name", :sort => "last_name" %></th>
+    <th><%= link_to "Email", :sort => "email" %></th>
+    <th><%= link_to "Phone", :sort => "phone" %></th>
+    <th><%= link_to "Street Address", :sort => "street_address" %></th>
+    <th><%= link_to "City", :sort => "city_address" %></th>
+    <th><%= link_to "State", :sort => "state_address" %></th>
+    <th><%= link_to "Zip Code", :sort => "zip_code" %></th>
+    <th><%= link_to "Birthdate", :sort => "birthdate" %></th>
+  </tr>
+
   <% @customers.each do |customer| %>
     <tr>
       <td><%= customer.first_name %></td>
