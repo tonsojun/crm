@@ -3,15 +3,15 @@
 <table>
 
   <tr>
-    <th><%= link_to "First Name", :sort => "first_name" %></th>
-    <th><%= link_to "Last Name", :sort => "last_name" %></th>
-    <th><%= link_to "Email", :sort => "email" %></th>
-    <th><%= link_to "Phone", :sort => "phone" %></th>
-    <th><%= link_to "Street Address", :sort => "street_address" %></th>
-    <th><%= link_to "City", :sort => "city_address" %></th>
-    <th><%= link_to "State", :sort => "state_address" %></th>
-    <th><%= link_to "Zip Code", :sort => "zip_code" %></th>
-    <th><%= link_to "Birthdate", :sort => "birthdate" %></th>
+    <th><%= sortable "first_name", "First Name" %></th>
+    <th><%= sortable "last_name", "Last Name" %></th>
+    <th><%= sortable "email", "email" %></th>
+    <th><%= sortable "phone", "phone" %></th>
+    <th><%= sortable "street_address", "Street Address" %></th>
+    <th><%= sortable "city_address", "City Address" %></th>
+    <th><%= sortable "state_address", "State Address" %></th>
+    <th><%= sortable "zip_code", "Zip Code" %></th>
+    <th><%= sortable "birthdate", "Birthdate" %></th>
   </tr>
 
   <% @customers.each do |customer| %>
