@@ -1,9 +1,9 @@
 <h1>Customer List</h1>
 
-<%= form_tag customers_path do %>
+<%= form_tag customers_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search %>
-    <%= submit_tag "Search" %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
 
