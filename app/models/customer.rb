@@ -5,16 +5,12 @@ class Customer < ApplicationRecord
   validates :email, presence: true  
 
   def self.search(search)
-    if search
-      # find(:all) is deprecated
-      #find(:all, :conditions => ['name LIKE ?', "%#{search}"]) 
-      Customer.where(['first_name LIKE ?', "%#{search}"])
+    if search.blank?
+      scoped
     else
-      #find(:all)
-      Customer.where()
+      Customer.where('first_name LIKE ?', "%#{search}")
     end
   end
 
 end
-
 
