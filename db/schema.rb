@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_005257) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.integer "phone"
+    t.bigint "phone"
     t.string "street_address"
     t.string "city_address"
     t.string "state_address"

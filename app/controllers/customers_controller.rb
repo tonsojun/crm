@@ -1,11 +1,12 @@
 class CustomersController < ApplicationController
   helper_method :sort_column, :sort_direction
-  def index 
+  
+
+  def index
     @customers = Customer.order(sort_column + " " + sort_direction)
     if params[:search]
       @customers = @customers.search(params[:search])
     end     
-
   end
   
   def show
@@ -21,9 +22,6 @@ class CustomersController < ApplicationController
     @customers.save
     redirect_to @customers
   end
-
-
-  
 
   private
     def customer_params
