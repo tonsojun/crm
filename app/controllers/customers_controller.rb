@@ -1,11 +1,10 @@
 class CustomersController < ApplicationController
   helper_method :sort_column, :sort_direction
   
-
   def index
     @customers = Customer.order(sort_column + " " + sort_direction)
     if params[:search]
-      @customers = @customers.search(params[:search])
+      @customers = CustomersQuery.new.first_name_search(params[:search])
     end     
   end
   
@@ -24,6 +23,14 @@ class CustomersController < ApplicationController
   end
 
   private
+
+    #def search_scope
+    #  @customers = Customer.order(sort_column + " " + sort_direction)
+    #if params[:search]
+    #  CustomersQuery.new.first_name_search(params[:search])
+    #end  
+    #end
+
     def customer_params
       params.require(:customers).permit(:first_name, :last_name, :email, :phone, :street_address, :city_address, :state_address, :zip_code, :birthdate)
     end 

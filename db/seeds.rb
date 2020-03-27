@@ -12,5 +12,5 @@ require 'faker'
     zip_code: Faker::Address.zip,
     birthdate: Faker::Date.birthday(min_age: 18, max_age: 70)
   )
-
+# date is currently "23 Dec 1999"
 end

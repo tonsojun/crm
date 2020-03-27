@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :customers
   
-  root 'dashboard#index'
+  root 'customers#index'
   
 end
